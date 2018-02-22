@@ -11,11 +11,10 @@ exports.handler = function (event, context, callback) {
 		WaitTimeSeconds: '0'
 	}, function (receivedMessages) {
 		receivedMessages.forEach(message => {
-			// your logic to access each message through out the loop. Each message is available under variable message 
-			// within this block
+			console.log("success",message);
 		})
 	}, function (error) {
-		// implement error handling logic here
+		console.log("error ", error);
 	});
 
 	callback(null, 'Successfully executed');
